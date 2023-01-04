@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS `train_station_service`;
+DROP TABLE IF EXISTS `service`;
+DROP TABLE IF EXISTS `train_station_language`;
+DROP TABLE IF EXISTS `language`;
+DROP TABLE IF EXISTS `train_journey`;
+DROP TABLE IF EXISTS `journey`;
+DROP TABLE IF EXISTS `train`;
+DROP TABLE IF EXISTS `company`;
+DROP TABLE IF EXISTS `train_station`;
