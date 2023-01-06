@@ -1,22 +1,6 @@
 import random
 import math
 
-def gen(X,Y,nbt):
-    tab = []
-    po=[]
-    for i in range(Y):
-        tab.append([])
-        for j in range(X):
-            tab[i].append(".")
-    count=0
-    while nbt>count:
-        x,y=random.randint(0,X-1),random.randint(0,Y-1)
-        if tab[y][x]==".":
-            tab[y][x]=count
-            po.append((count,x,y))
-            count+=1
-    return tab,po
-
 def display(tab):
     for i in range(len(tab)):
         str_=""
@@ -54,7 +38,7 @@ def display(tab):
                 str_+=str(tab[i][j])+""
         print(str_)
 
-def link(tab,po):
+def link(po):
     links = []
     for unit in po:
         poss = []
@@ -114,10 +98,6 @@ def dist(coord1,coord2):
 
 def takedist(elem):
     return elem[2]
-
-tab,po = gen(100,35,50)
-showlink(tab,po,link(tab,po))
-
 
 
 
