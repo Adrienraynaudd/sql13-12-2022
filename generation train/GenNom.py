@@ -19,4 +19,3 @@ def genName():
                 name += son_cons[random.randint(0,len(son_cons)-1)]
             is_syl = not is_syl
         return name
-

@@ -84,9 +84,6 @@ def showlink(tab,po,links):
                 tab[coord1[1]][coord1[0]]="X"
     display(tab)
 
-
-
-
 def dist(coord1,coord2):
     dist1 = coord1[0]-coord2[0]
     dist2 = coord1[1]-coord2[1]

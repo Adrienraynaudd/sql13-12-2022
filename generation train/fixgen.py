@@ -1,6 +1,10 @@
 def fix_gen():
     train = [
         {
+            "id_train" : 4,
+            "name" : "wagon de passagers"
+        },
+        {
             "id_train" : 0,
             "name" : "wagon a vehicules"
         },
@@ -14,10 +18,6 @@ def fix_gen():
         },{
             "id_train" : 3,
             "name" : "wagon marchandise"
-        },
-        {
-            "id_train" : 4,
-            "name" : "wagon de passagers"
         }
     ]
     language = [
