@@ -23,6 +23,7 @@ def gen_db(nbt_train,nbt_comp,X,Y):
     train_journey = gen_train_journey(journey,train)
     station_language = station_lang(train_station,language)
     station_service = gen_station_service(len(train_station),service)
+    station_language = gen_station_language(len(train_station),language)
 
     # insert all the data in the db
     for company_ in company:
@@ -52,7 +53,9 @@ def gen_db(nbt_train,nbt_comp,X,Y):
     for service_ in service:
         key_,val = get_key_val(service_)
         insert_element("service", key_,val)
-
+    for station_language_ in station_language:
+        key_,val = get_key_val(station_language_)
+        insert_element("train_station_language", key_,val)
 
 def get_key_val(dic):
     key_ = []

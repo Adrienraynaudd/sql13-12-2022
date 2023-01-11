@@ -51,6 +51,14 @@ CREATE TABLE IF NOT EXISTS `language`
     `name` VARCHAR(50) NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS `train_station_language`
+(
+    `id_station` INT NOT NULL,
+    `id_language` INT NOT NULL,
+    foreign key (id_station) references Train_station(id_Station),
+    foreign key (id_language) references Language(id_language)
+);
+
 CREATE TABLE IF NOT EXISTS `service`
 (
     `id_service` INT PRIMARY KEY,

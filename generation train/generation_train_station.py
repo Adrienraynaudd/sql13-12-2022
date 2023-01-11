@@ -15,7 +15,7 @@ def gen_train_station(nbt,nbt_comp,language):
             train_station["have_terminals"] = True
         else:
             train_station["have_terminals"] = False
-        train_station["hourly"] = str(randint(0,6)) + "h00 /" + str(randint(20,24)) + "h00"
+        train_station["hourly"] = str(randint(0,6)) + "h00 / " + str(randint(20,24)) + "h00"
         train_station["id_company"] = randint(0,nbt_comp-1)
         train_station["passengers_per_year"] = randint(100000,1000000)
         train_stations.append(train_station)
@@ -41,7 +41,7 @@ def gen_station_service(nbt,service_):
     train_stations_service = []
     for i in range(nbt):
         allservice = [service_[i]["id_service"] for i in range(len(service_))]
-        for j in range(randint(0,len(allservice)-1)):
+        for j in range(randint(0,len(allservice))):
             service = {}
             serv = allservice[randint(0,len(allservice)-1)]
             service["id_station"] = i
@@ -49,6 +49,19 @@ def gen_station_service(nbt,service_):
             allservice.remove(serv)
             train_stations_service.append(service)
     return train_stations_service
+
+def gen_station_language(nbt,language_):
+    train_stations_language = []
+    for i in range(nbt):
+        all_language = [language_[i]["id_language"] for i in range(len(language_))]
+        for j in range(randint(1,len(all_language))):
+            language = {}
+            lang = all_language[randint(0,len(all_language)-1)]
+            language["id_station"] = i
+            language["id_language"] = lang
+            all_language.remove(lang)
+            train_stations_language.append(language)
+    return train_stations_language
 
 def station_lang(station, lang):
     train_stations_lang = []
